@@ -88,19 +88,7 @@ INCS +=		$(COMMON_INC) \
 EXTRA_CFLAGS += $(INCS)
 
 ifeq ($(TARGET_PRODUCT), $(filter $(TARGET_PRODUCT), umi cmi cas apollo))
-       CDEFINES += -DCONFIG_AUDIO_SMARTPA_STEREO
-endif
-
-ifneq (,$(filter $(TARGET_PRODUCT), draco))
-	CDEFINES += -DCONFIG_TARGET_PRODUCT_DRACO
-endif
-
-ifeq ($(TARGET_PRODUCT), monet)
-	CDEFINES += -DCONFIG_TARGET_PRODUCT_MONET
-endif
-
-ifeq ($(TARGET_PRODUCT), vangogh)
-	CDEFINES += -DCONFIG_TARGET_PRODUCT_VANGOGH
+    CDEFINES += -DCONFIG_AUDIO_SMARTPA_STEREO
 endif
 
 ifeq ($(TARGET_PRODUCT), apollo)
