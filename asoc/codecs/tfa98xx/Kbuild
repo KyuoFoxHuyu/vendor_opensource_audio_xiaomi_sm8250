@@ -108,10 +108,6 @@ ifeq ($(TARGET_PRODUCT), $(filter $(TARGET_PRODUCT),lmi lmiin lmiinpro cas umi c
 	CDEFINES += -DAUDIO_SM8250_FLAG
 endif
 
-ifneq (,$(filter $(TARGET_PRODUCT), picasso picassoin))
-CDEFINES += -DTFA_NON_DSP_SOLUTION
-endif
-
 KBUILD_CPPFLAGS += $(CDEFINES)
 
 # Currently, for versions of gcc which support it, the kernel Makefile
